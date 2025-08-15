@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -16,18 +17,22 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-8">
-          <Nav />
-          <Link href="/contact">
-            <Button className="transition-transform duration-300 hover:scale-105">
-              Hire me
-            </Button>
-          </Link>
-        </nav>
+        {/* Desktop Navigation */}
+<nav className="hidden xl:flex items-center gap-8">
+  <Nav />
+  <Link href="/contact">
+    <Button
+      className="bg-[#00ff99] text-black font-semibold px-4 py-2 rounded-2xl shadow-md hover:bg-[#0D5A3BFF] transition-colors duration-300 cursor-pointer " 
+    >
+      Hire me
+    </Button>
+  </Link>
+</nav>
+
 
         {/* Mobile Menu Button */}
         <div className="xl:hidden">
-          
+          <MobileNav />
         </div>
       </div>
     </header>
