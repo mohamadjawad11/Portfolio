@@ -5,7 +5,7 @@ import PortfolioImage from "@/app/assets/PortfolioImage2.png";
 
 const Photo = () => {
   return (
-    <div className="relative w-[300px] h-[300px] xl:w-[500px] xl:h-[500px]">
+    <div className="relative w-[240px] h-[240px] xl:w-[500px] xl:h-[500px]" >
       {/* Image */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -32,7 +32,7 @@ const Photo = () => {
         <motion.circle
           cx="263"
           cy="300"
-          r="250"
+          r="240"
           stroke="#00ff99"
           strokeWidth="4"
           strokeLinecap="round"
