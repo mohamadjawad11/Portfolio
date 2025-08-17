@@ -6,12 +6,12 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-4 xl:py-6 text-white bg-primary-color ">
+    <header className="py-4 xl:py-6 text-white bg-primary-color">
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center group">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight transition-colors duration-300 group-hover:text-accent">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight transition-colors duration-300 group-hover:text-accent ml-0 sm:ml-40">
             Mohammad <span className="text-[#00e187]">.</span>
           </h1>
         </Link>
