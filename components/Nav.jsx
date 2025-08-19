@@ -7,7 +7,7 @@ const links = [
   { name: 'home', path: '/' },
   { name: 'services', path: '/services' },
   { name: 'resume', path: '/resume' },
-  { name: 'Work', path: '/projects' },
+  { name: 'projects', path: '/projects' },
   { name: 'contact', path: '/contact' },
 ];
 

@@ -194,31 +194,31 @@ const Resume = () => {
         }}} className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0">
   <div className="container mx-auto max-w-[1150px] ml-10 mr-10 xl:ml-0 xl:mr-0">
     <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
-     <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 cursor-pointer">
+     <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 cursor-pointer ">
   <TabsTrigger 
     value="experience" 
-    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer"
+    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer hover:opacity-90 hover:scale-105 transition-transform duration-200"
   >
     Experience
   </TabsTrigger>
 
   <TabsTrigger 
     value="education" 
-    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer"
+    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer hover:opacity-90 hover:scale-105 transition-transform duration-200"
   >
     Education
   </TabsTrigger>
 
   <TabsTrigger 
     value="skills" 
-    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer"
+    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer hover:opacity-90 hover:scale-105 transition-transform duration-200"
   >
     Skills
   </TabsTrigger>
 
   <TabsTrigger 
     value="about" 
-    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer"
+    className="w-full py-4 rounded-md bg-[#212128FF] text-white data-[state=active]:bg-[#00ff9d] data-[state=active]:text-black transition-colors cursor-pointer hover:opacity-90 hover:scale-105 transition-transform duration-200"
   >
     About me
   </TabsTrigger>
@@ -270,17 +270,17 @@ const Resume = () => {
 
          <TabsContent value="skills" className="w-full h-full">
           <div className="flex flex-col gap-[30px]">
-            <div className="flex flex col gap-[30px] text-center xl:text-left">
-              <h3 className="text-4xl font-bold">{skills.title}</h3>
+            <div className="flex flex col gap-[30px]">
+              <h3 className="text-4xl font-bold text-center xl:text-left ml-[110px] xl:ml-0 mt-8 xl:mt-0">{skills.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
             </div>
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-[15px]">
               {skills.skillList.map((skill, index)=>{
                 return <li key={index}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group cursor-pointer">
-                        <div className="text-6xl group-hover:text-[#00ff99] transition-all duration-300">{skill.icon}</div>
+                        <div className="text-6xl group-hover:text-[#00ff99] transition-all duration-300 gap-5">{skill.icon}</div>
                       </TooltipTrigger>
                       <TooltipContent><p>{skill.name}</p></TooltipContent>
                     </Tooltip>
@@ -291,8 +291,37 @@ const Resume = () => {
           </div>
         </TabsContent>
 
-         <TabsContent value="about" className="w-full">
-          
+         <TabsContent value="about" className="w-full text-center xl:text-left">
+            <div className="flex flex-col gap-[30px]">
+              <h3 className="text-4xl font-bold">{about.title}</h3>
+              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 gap-x-[120px] max-w-[620px] mx-auto xl:mx-0 ">
+                {about.info.map((item, index) => {
+  const isLast = index === about.info.length - 1; // check if last item
+  return (
+    <li
+      key={index}
+      className="flex items-center justify-between xl:justify-start gap-2"
+    >
+      <span className="text-[#00ff99]">{item.fieldname}</span>
+      {isLast ? (
+        <a
+          href={item.fieldValue}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/90 hover:text-[#A5D1C0FF] underline transition-colors"
+        >
+          {item.fieldValue}
+        </a>
+      ) : (
+        <span className="text-white/90">{item.fieldValue}</span>
+      )}
+    </li>
+  );
+})}
+
+              </ul>
+            </div>
         </TabsContent>
       </div>
     </Tabs>

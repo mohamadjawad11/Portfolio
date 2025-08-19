@@ -1,40 +1,28 @@
-"use client"
+"use client";
 
 import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { XIcon } from "lucide-react"
 
-
 import { cn } from "@/lib/utils"
 
-function Sheet({
-  ...props
-}) {
+function Sheet({ ...props }) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />;
 }
 
-function SheetTrigger({
-  ...props
-}) {
+function SheetTrigger({ ...props }) {
   return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
 }
 
-function SheetClose({
-  ...props
-}) {
+function SheetClose({ ...props }) {
   return <SheetPrimitive.Close data-slot="sheet-close" {...props} />;
 }
 
-function SheetPortal({
-  ...props
-}) {
+function SheetPortal({ ...props }) {
   return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />;
 }
 
-function SheetOverlay({
-  className,
-  ...props
-}) {
+function SheetOverlay({ className, ...props }) {
   return (
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
@@ -46,19 +34,14 @@ function SheetOverlay({
   );
 }
 
-function SheetContent({
-  className,
-  children,
-  side = "right",
-  ...props
-}) {
+function SheetContent({ className, children, side = "right", ...props }) {
   return (
     <SheetPortal>
       <SheetOverlay />
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
-          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+          "bg-[#232329] text-white data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
           side === "right" &&
             "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-3/4 border-l sm:max-w-sm",
           side === "left" &&
@@ -69,11 +52,15 @@ function SheetContent({
             "data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom inset-x-0 bottom-0 h-auto border-t",
           className
         )}
-        {...props}>
+        {...props}
+      >
         {children}
+
+        {/* Updated X exit button */}
         <SheetPrimitive.Close
-          className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
-          <XIcon className="size-4" />
+          className="absolute top-4 right-4 text-[#00ff99] hover:text-[#00ffcc] focus:outline-none focus:ring-2 focus:ring-[#00ff99] rounded-full p-1 cursor-pointer transition-colors duration-200"
+        >
+          <XIcon className="w-6 h-6" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
@@ -81,10 +68,7 @@ function SheetContent({
   );
 }
 
-function SheetHeader({
-  className,
-  ...props
-}) {
+function SheetHeader({ className, ...props }) {
   return (
     <div
       data-slot="sheet-header"
@@ -93,10 +77,7 @@ function SheetHeader({
   );
 }
 
-function SheetFooter({
-  className,
-  ...props
-}) {
+function SheetFooter({ className, ...props }) {
   return (
     <div
       data-slot="sheet-footer"
@@ -105,10 +86,7 @@ function SheetFooter({
   );
 }
 
-function SheetTitle({
-  className,
-  ...props
-}) {
+function SheetTitle({ className, ...props }) {
   return (
     <SheetPrimitive.Title
       data-slot="sheet-title"
@@ -117,10 +95,7 @@ function SheetTitle({
   );
 }
 
-function SheetDescription({
-  className,
-  ...props
-}) {
+function SheetDescription({ className, ...props }) {
   return (
     <SheetPrimitive.Description
       data-slot="sheet-description"

@@ -6,7 +6,7 @@ import { FiDownload } from 'react-icons/fi'
 
 const Home = () => {
   return (
-    <section className="h-screen-[80vh] pt-16 ml-0 sm:ml-39 pb-20">
+    <section className="h-screen-[80vh] pt-16 ml-0 sm:ml-39 pb-20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col-reverse xl:flex-row items-center justify-between gap-12 xl:gap-24">
           
@@ -43,11 +43,11 @@ const Home = () => {
           </div>
 
           {/* Image Section */}
-          <div className="order-2 xl:order-none ">
+          <div className="order-2 xl:order-none mt-[-50px]">
             <Photo />
           </div>
         </div>
-        <div className='pt-13'> <Stats /></div>
+        <div className='pt-18'> <Stats /></div>
         
       </div>
     </section>
