@@ -46,12 +46,12 @@ const Services = () => {
           return (
             <div key={index} className='flex-1 flex flex-col justify-center gap-6 group cursor-pointer ml-10 mr-10 xl:ml-0 xl:mr-0'>
               <div className='w-full flex justify-between items-center'>
-                <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover'>{service.num}</div>
-                <Link href={service.href} className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent-deafult transition-all duration-500 flex justify-center items-center hover:-rotate-45'>
-                  <BsArrowDownRight className='text-primary-color text-3xl'/>
+                <div className='text-4xl xl:text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover'>{service.num}</div>
+                <Link href={service.href} className='w-[50px] h-[50px] xl:w-[70px] xl:h-[70px] rounded-full bg-white group-hover:bg-accent-deafult transition-all duration-500 flex justify-center items-center hover:-rotate-45'>
+                  <BsArrowDownRight className='text-primary-color text-2xl xl:text-3xl'/>
                 </Link>
               </div>
-              <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent-deafult transition-all duration-500'>{service.title}</h2>
+              <h2 className='text-[30px] xl:text[42px] font-bold leading-none text-white group-hover:text-accent-deafult transition-all duration-500'>{service.title}</h2>
               <p className='text-white-60'>{service.description}</p>
               <div className='border-b border-white/20 w-full'></div>
             </div>

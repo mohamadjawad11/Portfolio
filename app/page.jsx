@@ -17,7 +17,7 @@ const Home = () => {
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Hello, I&apos;m <br />
-              <span className="text-[#00ff99]">Mohammad Jawad</span>
+              <span className="text-[#00ff99]">Mohammad Hamdan</span>
             </h1>
             <p className="max-w-xl mx-auto xl:mx-0 mb-9 text-white/70 leading-relaxed">
               I&apos;m a software engineer with a passion for building
