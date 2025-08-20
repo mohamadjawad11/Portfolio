@@ -126,7 +126,7 @@ const education={
 }
 
 const skills={
-  title:"My Skills",
+  title:"Skills",
   description:"",
  skillList :[
   {
@@ -271,7 +271,7 @@ const Resume = () => {
          <TabsContent value="skills" className="w-full h-full">
           <div className="flex flex-col gap-[30px]">
             <div className="flex flex col gap-[30px]">
-              <h3 className="text-4xl font-bold text-center xl:text-left ml-[110px] xl:ml-0 mt-8 xl:mt-0">{skills.title}</h3>
+              <h3 className="text-4xl font-bold text-center xl:text-left ml-[120px] xl:ml-0 mt-8 xl:mt-0">{skills.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
             </div>
             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-[15px]">
