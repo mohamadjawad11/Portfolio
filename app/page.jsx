@@ -26,7 +26,7 @@ const Home = () => {
             </p>
 
             {/* Buttons & Social */}
-            <div className="flex items-center xl:justify-start gap-10 ml-17 xl:ml-0">
+            <div className="flex items-center xl:justify-start gap-10 ml-17 xl:ml-0 mr-5 xl:mr-0">
               <Button
                 variant="default"
                 size="lg"
