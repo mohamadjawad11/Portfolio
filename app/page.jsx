@@ -47,7 +47,7 @@ const Home = () => {
             <Photo />
           </div>
         </div>
-        <div className='pt-18'> <Stats /></div>
+        <div className='pt-18 pl-20'> <Stats /></div>
         
       </div>
     </section>
