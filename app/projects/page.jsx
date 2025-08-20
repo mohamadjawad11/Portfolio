@@ -63,7 +63,8 @@ const Work = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 max-w-[1200px] mx-auto px-4 xl:px-3 ml-5 xl:ml-0 mr-5 xl:mr-0"
+className="min-h-[80vh] flex flex-col justify-center py-12 px-10 xl:px-1 max-w-[1200px] mx-auto"
+
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
