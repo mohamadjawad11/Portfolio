@@ -95,7 +95,7 @@ const education={
     },
     {
       institution:"Udemy Online Course",
-      degree:"Full Stack Web Development bootcamp",
+      degree:"Full Stack Web bootcamp",
       duration:"2022",
     },
 

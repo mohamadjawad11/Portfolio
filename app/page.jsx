@@ -30,13 +30,13 @@ const Home = () => {
               <Button
                 variant="default"
                 size="lg"
-                className="uppercase flex items-center gap-2 bg-[#1c1c22] text-[#00ff99] hover:bg-black transition-all duration-300 rounded-full px-6 py-3 border border-[#00ff99] hover:bg-[#138B5BFF] hover:text-white cursor-pointer"
+                className="uppercase flex items-center gap-2 bg-[#1c1c22] text-[#00ff99] hover:bg-black transition-all duration-300 rounded-full px-6 py-3 border border-[#00ff99] hover:bg-[#138B5BFF] hover:text-white cursor-pointer mr-3 xl:mr-0"
               >
                 <span>DOWNLOAD CV</span>
                 <FiDownload className="text-xl" />
               </Button>
               <Social
-                containerStyles="flex flex-row gap-4"
+                containerStyles="flex flex-row gap-4 mr-3 xl:mr-0"
                 iconStyles="w-10 h-10 border border-[#00ff99] rounded-full flex justify-center items-center text-[#00ff99] text-lg hover:bg-[#00ff99] hover:text-white transition-all duration-500 cursor-pointer hover:scale-110 hover:shadow-xl hover:shadow-[#00ff99]/30"
               />
             </div>
