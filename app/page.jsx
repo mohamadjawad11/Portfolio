@@ -37,7 +37,7 @@ const Home = () => {
               </Button>
               <Social
                 containerStyles="flex flex-row gap-4 mr-3 xl:mr-0"
-                iconStyles="w-10 h-10 border border-[#00ff99] rounded-full flex justify-center items-center text-[#00ff99] text-lg hover:bg-[#00ff99] hover:text-white transition-all duration-500 cursor-pointer hover:scale-110 hover:shadow-xl hover:shadow-[#00ff99]/30"
+                iconStyles="w-10 h-10 border border-[#00ff99] rounded-full flex justify-center items-center text-[#00ff99] text-lg hover:bg-[#00ff99] hover:text-white transition-all duration-500 cursor-pointer hover:scale-110 hover:shadow-xl hover:shadow-[#00ff99]/30 mr-3 xl:mr-0"
               />
             </div>
           </div>
