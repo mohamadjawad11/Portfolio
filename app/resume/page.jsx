@@ -291,38 +291,40 @@ const Resume = () => {
           </div>
         </TabsContent>
 
-         <TabsContent value="about" className="w-full text-center xl:text-left">
-            <div className="flex flex-col gap-[30px]">
-              <h3 className="text-4xl font-bold">{about.title}</h3>
-              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 gap-x-[120px] max-w-[620px] mx-auto xl:mx-0 ">
-                {about.info.map((item, index) => {
-  const isLast = index === about.info.length - 1; // check if last item
-  return (
-    <li
-      key={index}
-      className="flex items-center justify-between xl:justify-start gap-2"
-    >
-      <span className="text-[#00ff99]">{item.fieldname}</span>
-      {isLast ? (
-        <a
-          href={item.fieldValue}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white/90 hover:text-[#A5D1C0FF] underline transition-colors"
-        >
-          {item.fieldValue}
-        </a>
-      ) : (
-        <span className="text-white/90">{item.fieldValue}</span>
-      )}
-    </li>
-  );
-})}
+        <TabsContent value="about" className="w-full text-center xl:text-left">
+  <div className="flex flex-col gap-[30px]">
+    <h3 className="text-4xl font-bold">{about.title}</h3>
+    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+    <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 gap-x-[120px] max-w-[620px] mx-auto xl:mx-0">
+      {about.info.map((item, index) => {
+        const isLast = index === about.info.length - 1; // check if last item (GitHub)
+        return (
+          <li
+            key={index}
+            className="flex items-center justify-between xl:justify-start gap-2"
+          >
+            <span className="text-[#00ff99]">{item.fieldname}</span>
+            {isLast ? (
+              // Show "GitHub" text only on mobile; full URL on xl
+              <a
+                href={item.fieldValue}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/90 hover:text-[#A5D1C0FF] underline transition-colors"
+              >
+                <span className="inline xl:hidden">GitHub</span>
+                <span className="hidden xl:inline">{item.fieldValue}</span>
+              </a>
+            ) : (
+              <span className="text-white/90">{item.fieldValue}</span>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</TabsContent>
 
-              </ul>
-            </div>
-        </TabsContent>
       </div>
     </Tabs>
   </div>
