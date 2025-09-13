@@ -20,7 +20,7 @@ const handleDownload = () => {
         <div className="flex flex-col-reverse xl:flex-row items-center justify-between gap-12 xl:gap-24">
           
           {/* Text Section */}
-          <div className="text-center xl:text-left order-1 xl:order-none">
+          <div className="text-center xl:text-left order-1 xl:order-none ml-3 mr-3 xl:mr-0 xl:ml-0">
             <span className="text-lg tracking-wide text-accent-default font-medium">
               Software Engineer
             </span>
