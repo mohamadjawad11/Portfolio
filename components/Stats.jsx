@@ -2,8 +2,8 @@
 import CountUp from "react-countup";
 
 const stats = [
-  { num: 4, text: "Years of Experience" },
-  { num: 12, text: "Projects Completed" },
+  { num: 3, text: "Years of Experience" },
+  { num: 8, text: "Projects Completed" },
   { num: 10, text: "Technologies Mastered" },
   { num: 400, text: "Code commits" },
 ];
@@ -12,12 +12,11 @@ const Stats = () => {
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">
-        {/* Parent flex: column on mobile, row on xl */}
-        <div className="flex flex-col gap-6 xl:flex-row xl:gap-12 max-w-[80vw] mx-auto xl:max-w-none">
+        {/* Use grid: 2 columns on small, 4 columns on xl */}
+        <div className="grid grid-cols-2 gap-6 xl:grid-cols-4 xl:gap-12 max-w-[80vw] mx-auto xl:max-w-none">
           {stats.map((stat, index) => (
-            // Each stat: number and text side by side
             <div
-              className="flex flex-row items-center gap-4"
+              className="flex flex-col items-center gap-2 text-center"
               key={index}
             >
               <CountUp

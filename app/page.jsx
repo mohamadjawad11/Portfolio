@@ -28,7 +28,7 @@ const handleDownload = () => {
               Hello, I&apos;m <br />
               <span className="text-[#00ff99]">Mohammad Hamdan</span>
             </h1>
-            <p className="max-w-xl mx-auto xl:mx-0 mb-9 text-white/70 leading-relaxed">
+            <p className="max-w-xl mx-auto xl:mx-0 mb-9 text-white/70 leading-relaxed ml-3 mr-3 xl:ml-0 xl:mr-0">
               I&apos;m a software engineer with a passion for building
               scalable and efficient software solutions using modern
               technologies.
