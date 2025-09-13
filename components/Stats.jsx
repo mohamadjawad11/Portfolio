@@ -10,7 +10,7 @@ const stats = [
 
 const Stats = () => {
   return (
-    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0 mr-4 xl:mr-0">
+    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0 mr-6 xl:mr-0">
       <div className="container mx-auto">
         {/* Use grid: 2 columns on small, 4 columns on xl */}
         <div className="grid grid-cols-2 gap-6 xl:grid-cols-4 xl:gap-12 max-w-[80vw] mx-auto xl:max-w-none">
