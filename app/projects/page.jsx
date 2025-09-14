@@ -18,7 +18,7 @@ import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-import novamind2 from "@/app/assets/novamind3.png";
+import novamind2 from "@/app/assets/image.png";
 import property2 from "@/app/assets/property3.png";
 
 // ================== PROJECTS DATA ==================
